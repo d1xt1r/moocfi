@@ -1,31 +1,27 @@
-
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+        import java.util.Collections;
+        import java.util.Scanner;
 
 public class WordsInAlphabeticalOrder {
-
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-
+        // create here an ArrayList
         ArrayList<String> words = new ArrayList<String>();
 
-        while (true){
+        System.out.println("Type a word: ");
+        String userInput = reader.nextLine();
 
+        while (!userInput.isEmpty()){
+            words.add(userInput);
             System.out.println("Type a word: ");
-            String word = reader.nextLine();
-
-            if(word.isEmpty()){
-                break;
-            }
-            words.add(word);
+            userInput = reader.nextLine();
         }
-
         Collections.sort(words);
-        System.out.println("You typed the following words:");
+        System.out.println("You typed the following words: ");
 
-        for (String forPrint : words){
-            System.out.println(forPrint);
+        for(String word : words){
+            System.out.println(word);
         }
     }
 }
+
