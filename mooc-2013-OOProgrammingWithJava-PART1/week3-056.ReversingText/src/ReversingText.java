@@ -7,16 +7,15 @@ public class ReversingText {
         // write your code here
         // note that method does now print anything, it RETURNS the reversed string
 
-        System.out.println(text.length());
+        String reversed = "";
 
-        String reverseString = "";
-
-        int i = text.length() - 1;
-        while (i >= 0) {
-            reverseString = reverseString +  text.charAt(i);
-            i--;
+        int i = 1;
+        while (i <= text.length()){
+            char character = text.charAt(text.length() - i);
+            i++;
+            reversed = reversed + character;
         }
-        return reverseString;
+        return reversed;
     }
 
     public static void main(String[] args) {
