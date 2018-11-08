@@ -4,26 +4,32 @@ import java.util.Scanner;
 public class MoreThanOnce {
 
     public static boolean moreThanOnce(ArrayList<Integer> list, int searched) {
+        // write your code here
 
-        int moreThanOnce = 0; // loop index
-        for(int numberInList : list){ // loop through all numbers in the list
-            if(numberInList == searched){ // if any number in the list is equal to the searched number
-                moreThanOnce++; // increase loop index by 1
+        int moreThanOnce = 0;
+
+        for(int num : list){
+            if(searched == num){
+                moreThanOnce++;
             }
-            if(moreThanOnce >= 2){ // if moreThanOnce is equal or bigger than 2 the number appears on the list more than once
+            if(moreThanOnce == 2){
                 return true;
             }
         }
+
         return false;
     }
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(3);
-        list.add(2);
+        list.add(0);
         list.add(7);
-        list.add(2);
+        list.add(9);
+        list.add(-1);
+        list.add(-13);
+        list.add(8);
+        list.add(-1);
         
         System.out.println("Type a number: ");
         int number = Integer.parseInt(reader.nextLine());
