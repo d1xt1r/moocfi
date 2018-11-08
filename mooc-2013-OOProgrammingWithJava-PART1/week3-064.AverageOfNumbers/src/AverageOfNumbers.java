@@ -15,8 +15,8 @@ public class AverageOfNumbers {
 
     public static double average(ArrayList<Integer> list) {
         // write code here
-        double avg = list.size();
-        double avgOfNumbers = sum(list) / avg;
+        double itemsInList = list.size();
+        double avgOfNumbers = sum(list) / itemsInList;
         return avgOfNumbers;
     }
 
