@@ -3,27 +3,28 @@ import java.util.Scanner;
 public class Palindromi {
 
     public static boolean palindrome(String text) {
+        // write code here
 
-        String reverseString = "";
+        String reversed = "";
+        int i = 1;
 
-        int i = text.length() - 1;
-        while (i >= 0) {
-            reverseString = reverseString + text.charAt(i);
-            i--;
+        while (i <= text.length()){
+            char character = text.charAt(text.length() - i);
+            i++;
+            reversed = reversed + character;
         }
-
-        if (text.equals(reverseString)) {
+        if(reversed.equals(text)){
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
+
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-
+        
         System.out.println("Type a text: ");
-        String text = reader.nextLine();
+        String text = reader.nextLine();    
         if (palindrome(text)) {
             System.out.println("The text is a palindrome!");
         } else {
